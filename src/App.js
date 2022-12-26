@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 // import pages
 import Home from './pages/Home';
 import About from './pages/About';
@@ -9,7 +9,7 @@ import Error from './pages/Error';
 import Navbar from './components/Navbar';
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -17,7 +17,7 @@ function App() {
         <Route path='cocktail/:id' element={<SingleCocktail />} />
         <Route path='*' element={<Error />} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
